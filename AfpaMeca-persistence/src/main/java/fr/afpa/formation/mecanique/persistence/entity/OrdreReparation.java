@@ -48,7 +48,6 @@ public class OrdreReparation {
 	private Utilisateur userValid;
 	@OneToOne
 	private Utilisateur userCloture;
-	private Vehicule vehicule;
 
 	public OrdreReparation() {
 		super();
