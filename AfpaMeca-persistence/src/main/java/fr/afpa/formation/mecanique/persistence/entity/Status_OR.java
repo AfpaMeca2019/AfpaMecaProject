@@ -1,11 +1,13 @@
 package fr.afpa.formation.mecanique.persistence.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
+@Entity
 public class Status_OR {
 
 	@Id
