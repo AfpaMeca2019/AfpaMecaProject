@@ -4,13 +4,16 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
+@Entity
 public class Devis {
 
 	@Id
@@ -20,9 +23,14 @@ public class Devis {
 	private Date dateCreation;
 	private String numDevis;
 	private Date datePaiement;
+	
 	@OneToMany
 	private Set<DevisItem> listDevisItem = new HashSet<>();
+	
+	@ManyToOne
 	private TypePaiement paie;
+	
+	@ManyToOne
 	private Fournisseur f;
 
 	public Devis(Date dateCreation, String numDevis, Date datePaiement) {

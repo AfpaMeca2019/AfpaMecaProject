@@ -19,7 +19,7 @@ public class Client extends Personne {
 	@Column(name = "dateInscription")
 	private Date dateInscription;
 
-	@Column(name = "statut", nullable = false, length = 15)
+	@Column(name = "statut", nullable = false, length = 1)
 	private String statut;
 
 	/**
