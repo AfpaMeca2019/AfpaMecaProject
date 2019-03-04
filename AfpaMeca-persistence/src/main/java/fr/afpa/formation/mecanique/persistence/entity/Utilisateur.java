@@ -17,7 +17,7 @@ public abstract class Utilisateur extends Personne { //abstract, car s'est une c
 	@Column(name = "role", nullable = false, length = 10)
 	private String role;
 
-	@Column(name = "identifiant", nullable = false)
+	@Column(name = "date_inscription", nullable = false)
 	private Date inscription;
 
 	@Column(name = "radiation", nullable = false)

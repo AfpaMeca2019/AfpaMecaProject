@@ -112,6 +112,15 @@ public abstract class Personne { // abstract = impossible de l'instancier , impo
 		this.telephone = telephone;
 	}
 
+	
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 
 	@Override
 	public String toString() {
