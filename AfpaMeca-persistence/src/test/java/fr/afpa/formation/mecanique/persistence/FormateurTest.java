@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,10 +18,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import fr.afpa.formation.mecanique.persistence.entity.Formateur;
-import fr.afpa.formation.mecanique.persistence.entity.Utilisateur;
+import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Formateur;
 import fr.afpa.formation.mecanique.persistence.repository.FormateurRepository;
-import fr.afpa.formation.mecanique.persistence.repository.UtilisateurRepository;
+
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

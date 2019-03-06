@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.statutOR;
+package fr.afpa.formation.mecanique.persistence.entity.statutOR;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Cloture implements Statut_OR {
+public class Cloture extends Statut_OR {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
 	@GenericGenerator(name = "native", strategy = "native")
@@ -17,7 +17,6 @@ public class Cloture implements Statut_OR {
 	
 	private Cloture() {}
 
-	@Override
 	public Cloture getInstance() {
 		// TODO Auto-generated method stub
 		if(c == null) {

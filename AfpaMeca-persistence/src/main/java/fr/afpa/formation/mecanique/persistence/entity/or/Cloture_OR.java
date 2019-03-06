@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.or;
+package fr.afpa.formation.mecanique.persistence.entity.or;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,7 +11,8 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import fr.afpa.formation.mecanique.persistence.statutCloture.StatutCloture;
+import fr.afpa.formation.mecanique.persistence.entity.statutCloture.StatutCloture;
+
 
 @Entity
 public class Cloture_OR {

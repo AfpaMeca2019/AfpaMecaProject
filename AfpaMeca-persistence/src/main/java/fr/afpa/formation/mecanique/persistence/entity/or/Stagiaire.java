@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.or;
+package fr.afpa.formation.mecanique.persistence.entity.or;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import fr.afpa.formation.mecanique.persistence.utilisateur.Utilisateur;
+import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Utilisateur;
 
 @Entity
 @DiscriminatorValue(value = "STA")//petit enfant

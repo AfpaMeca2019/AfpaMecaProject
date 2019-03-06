@@ -1,7 +1,7 @@
-package fr.afpa.formation.mecanique.persistence.statutOR;
+package fr.afpa.formation.mecanique.persistence.entity.statutOR;
 
 
-public class Statut_OR {
+public 	class Statut_OR {
 	private String statut;
 
 	public Statut_OR() {}

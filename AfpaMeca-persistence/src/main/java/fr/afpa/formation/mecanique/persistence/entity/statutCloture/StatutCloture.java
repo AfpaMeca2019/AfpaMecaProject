@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.statutCloture;
+package fr.afpa.formation.mecanique.persistence.entity.statutCloture;
 
 public interface StatutCloture {
 	

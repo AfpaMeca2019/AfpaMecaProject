@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.cq;
+package fr.afpa.formation.mecanique.persistence.entity.cq;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

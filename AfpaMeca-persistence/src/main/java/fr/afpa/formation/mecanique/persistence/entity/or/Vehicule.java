@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.or;
+package fr.afpa.formation.mecanique.persistence.entity.or;
 
 import java.sql.Date;
 

@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.typePaiement;
+package fr.afpa.formation.mecanique.persistence.entity.typePaiement;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

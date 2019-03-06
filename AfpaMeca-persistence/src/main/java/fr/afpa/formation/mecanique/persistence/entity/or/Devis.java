@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.or;
+package fr.afpa.formation.mecanique.persistence.entity.or;
 
 import java.sql.Date;
 import java.util.HashSet;
@@ -14,7 +14,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import fr.afpa.formation.mecanique.persistence.typePaiement.TypePaiement;
+import fr.afpa.formation.mecanique.persistence.entity.typePaiement.TypePaiement;
+
 
 @Entity
 @Table(name="devis")

@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.or;
+package fr.afpa.formation.mecanique.persistence.entity.or;
 
 import java.sql.Date;
 import java.util.HashSet;
@@ -16,9 +16,10 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import fr.afpa.formation.mecanique.persistence.cq.ControleQualite;
-import fr.afpa.formation.mecanique.persistence.statutOR.Statut_OR;
-import fr.afpa.formation.mecanique.persistence.utilisateur.Utilisateur;
+import fr.afpa.formation.mecanique.persistence.entity.cq.ControleQualite;
+import fr.afpa.formation.mecanique.persistence.entity.statutOR.Statut_OR;
+import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Utilisateur;
+
 
 @Entity
 public class OrdreReparation {

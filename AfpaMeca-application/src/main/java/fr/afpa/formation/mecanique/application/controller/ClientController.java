@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import fr.afpa.formation.mecanique.persistence.entity.Client;
+import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Client;
+
 
 
 
@@ -18,7 +19,7 @@ public class ClientController {
 	@GetMapping("/")
 	public String start(Model model) throws Exception {
 		List<Client> listClient = new ArrayList<>();
-		listClient.add(new Client("Gontrand", "Jean-eude", "0605040708", "123@g.com", "CL001", "ABC123", new Date(), "monStatus"));
+		listClient.add(new Client("Gontrand", "Jean-eude", "0605040708", "123@g.com", "CL001", "ABC123", new Date(), true));
 		
 		model.addAttribute("clients", listClient);
 		return "listClient";

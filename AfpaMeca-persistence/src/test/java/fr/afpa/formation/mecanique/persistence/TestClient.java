@@ -18,7 +18,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import fr.afpa.formation.mecanique.persistence.entity.Client;
+import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Client;
 import fr.afpa.formation.mecanique.persistence.repository.ClientRepository;
 
 @RunWith(SpringRunner.class)
@@ -51,7 +51,7 @@ public class TestClient {
 		kiab.setNumero("N1");
 		kiab.setNumeroCarteAfpa("123456789K");
 		kiab.setDateInscription(new Date());
-		kiab.setStatut("1");
+		kiab.setStatut(true);
 
 		entityManager.persist(kiab);
 
@@ -63,7 +63,7 @@ public class TestClient {
 		seb.setNumero("N2");
 		seb.setNumeroCarteAfpa("222556789K");
 		seb.setDateInscription(new Date());
-		seb.setStatut("1");
+		seb.setStatut(true);
 
 		entityManager.persist(seb);
 
@@ -75,7 +75,7 @@ public class TestClient {
 		nat.setNumero("N3");
 		nat.setNumeroCarteAfpa("1148556789K");
 		nat.setDateInscription(new Date());
-		nat.setStatut("1");
+		nat.setStatut(true);
 
 		idLastClient = (Long) entityManager.persistAndGetId(nat);
 
@@ -108,7 +108,7 @@ public class TestClient {
 		olivier.setNumero("N4");
 		olivier.setNumeroCarteAfpa("26764789K");
 		olivier.setDateInscription(new Date());
-		olivier.setStatut("1");
+		olivier.setStatut(true);
 
 		clientRep.save(olivier);
 

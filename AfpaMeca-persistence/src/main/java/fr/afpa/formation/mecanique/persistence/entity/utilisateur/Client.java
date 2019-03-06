@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.utilisateur;
+package fr.afpa.formation.mecanique.persistence.entity.utilisateur;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -10,7 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import fr.afpa.formation.mecanique.persistence.or.Vehicule;
+import fr.afpa.formation.mecanique.persistence.entity.or.Vehicule;
+
 
 @Entity
 @DiscriminatorValue(value = "CLI")

@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.utilisateur;
+package fr.afpa.formation.mecanique.persistence.entity.utilisateur;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;

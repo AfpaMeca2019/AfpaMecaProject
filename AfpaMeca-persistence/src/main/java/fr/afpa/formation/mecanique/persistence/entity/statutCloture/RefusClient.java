@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.statutCloture;
+package fr.afpa.formation.mecanique.persistence.entity.statutCloture;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,10 +7,11 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import fr.afpa.formation.mecanique.persistence.statutOR.Statut_OR;
+import fr.afpa.formation.mecanique.persistence.entity.statutOR.Statut_OR;
+
 
 @Entity
-public class RefusClient implements Statut_OR {
+public class RefusClient extends Statut_OR {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
 	@GenericGenerator(name = "native", strategy = "native")
@@ -21,7 +22,6 @@ public class RefusClient implements Statut_OR {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public Statut_OR getInstance() {
 		// TODO Auto-generated method stub
 		if(rc == null) rc = new RefusClient();
