@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 /target/
 /bin/
@@ -54,3 +55,7 @@ hs_err_pid*
 ### Custom ignore ###
 *.bin
 *.mf
+=======
+/target/
+/bin/
+>>>>>>> 553b14efeb571f05bc34408730d06592534ce56d

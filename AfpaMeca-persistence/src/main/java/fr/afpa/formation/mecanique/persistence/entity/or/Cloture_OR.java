@@ -1,0 +1,44 @@
+package fr.afpa.formation.mecanique.persistence.or;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import fr.afpa.formation.mecanique.persistence.statutCloture.StatutCloture;
+
+@Entity
+public class Cloture_OR {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name = "native", strategy = "native")
+	private Long id;
+	private StatutCloture statutCloture;
+	private Set<OrdreReparation> listOR = new HashSet<>();
+
+	public Cloture_OR(StatutCloture statutCloture, OrdreReparation or) {
+		super();
+		this.statutCloture = statutCloture;
+		listOR.add(or);
+	}
+	
+	public Cloture_OR() {
+		super();
+	}
+
+	public String getStatutCloture() {
+		return statutCloture.getStatut();
+	}
+
+	public void setStatutCloture(StatutCloture statutCloture) {
+		this.statutCloture = statutCloture;
+	}
+
+}
