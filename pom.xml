@@ -64,14 +64,14 @@
 	<!-- ================================================================================== -->
 	<!-- == (05.) GENERATION DE L'EXECUTABLE ============================================== -->
 	<!-- ================================================================================== -->
-	<build>
-		<plugins>
+<!-- 	<build> -->
+<!-- 		<plugins> -->
 <!-- 			<plugin> -->
 <!-- 				<groupId>org.springframework.boot</groupId> -->
 <!-- 				<artifactId>spring-boot-maven-plugin</artifactId> -->
-<!-- 			</plugin> -->
-		</plugins>
-	</build>
+<!-- 			</plugin> --> 
+<!-- 		</plugins> -->
+<!-- 	</build> -->
 
   <modules>
     <module>AfpaMeca-business</module>
