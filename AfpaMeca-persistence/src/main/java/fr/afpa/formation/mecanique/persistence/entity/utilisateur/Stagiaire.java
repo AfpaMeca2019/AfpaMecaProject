@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.persistence.entity.or;
+package fr.afpa.formation.mecanique.persistence.entity.utilisateur;
 
 import java.util.Date;
 
