@@ -16,9 +16,9 @@ public class Piece {
 	private Long id;
 	private String reference;
 	private String libelle;
-	private Long prixUnitaire;
+	private double prixUnitaire;
 
-	public Piece(String reference, String libelle, Long prixUnitaire) {
+	public Piece(String reference, String libelle, double prixUnitaire) {
 		super();
 		this.reference = reference;
 		this.libelle = libelle;
@@ -54,11 +54,11 @@ public class Piece {
 		this.libelle = libelle;
 	}
 
-	public Long getPrixUnitaire() {
+	public double getPrixUnitaire() {
 		return prixUnitaire;
 	}
 
-	public void setPrixUnitaire(Long prixUnitaire) {
+	public void setPrixUnitaire(double prixUnitaire) {
 		this.prixUnitaire = prixUnitaire;
 	}
 

@@ -117,6 +117,7 @@ public class TestClient {
 
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void findById() {
 

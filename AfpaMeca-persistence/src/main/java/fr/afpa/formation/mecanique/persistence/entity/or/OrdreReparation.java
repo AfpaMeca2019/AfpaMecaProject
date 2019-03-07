@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
 import org.hibernate.annotations.GenericGenerator;
 
 import fr.afpa.formation.mecanique.persistence.entity.cq.ControleQualite;
@@ -28,11 +26,19 @@ public class OrdreReparation {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
 	@GenericGenerator(name = "native", strategy = "native")
 	private Long id;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	@Column(nullable = false)
 	private String numeroOR;
 	@Column(nullable = false)
-	private Date dateCreation;
-	private Date dateSortie;
+	private java.util.Date dateCreation;
+	private java.util.Date dateSortie;
 	@Column(nullable = false)
 	private String symptomesClient;
 	@Column(nullable = false)
@@ -43,9 +49,10 @@ public class OrdreReparation {
 	private Set<Devis> listDevis = new HashSet<>();
 	@OneToOne
 	private ControleQualite cq;
-	private Statut_OR statusor;
 	@OneToOne
 	private Cloture_OR clotureor;
+	@ManyToOne
+	private Statut_OR statutor;
 	@OneToOne
 	private Utilisateur userCreate;
 	@OneToOne
@@ -78,20 +85,20 @@ public class OrdreReparation {
 		this.numeroOR = numeroOR;
 	}
 
-	public Date getDateCreation() {
+	public java.util.Date getDateCreation() {
 		return dateCreation;
 	}
 
-	public void setDateCreation(Date dateCreation) {
-		this.dateCreation = dateCreation;
+	public void setDateCreation(java.util.Date date) {
+		this.dateCreation = date;
 	}
 
-	public Date getDateSortie() {
+	public java.util.Date getDateSortie() {
 		return dateSortie;
 	}
 
-	public void setDateSortie(Date dateSortie) {
-		this.dateSortie = dateSortie;
+	public void setDateSortie(java.util.Date date) {
+		this.dateSortie = date;
 	}
 
 	public String getSymptomesClient() {
@@ -134,11 +141,11 @@ public class OrdreReparation {
 		this.clotureor = clotureor;
 	}
 
-	public Statut_OR getStatusor() {
-		return statusor;
+	public Statut_OR getStatutor() {
+		return statutor;
 	}
 
-	public void setStatusor(Statut_OR statusor) {
-		this.statusor = statusor;
+	public void setStatutor(Statut_OR statutor) {
+		this.statutor = statutor;
 	}
 }

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -21,9 +22,13 @@ public class ControleQualite {
 	private Date dateDebut;
 	private Long kilometrageFin;
 	private String observation;
+	@OneToOne
 	private Pneumatique p;
+	@OneToOne
 	private Niveau n;
+	@OneToOne
 	private Eclairage e;
+	@OneToOne
 	private Visibilite v;
 
 	public Date getDateDebut() {

@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -21,7 +22,9 @@ public class Cloture_OR {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
 	@GenericGenerator(name = "native", strategy = "native")
 	private Long id;
+	@ManyToOne
 	private StatutCloture statutCloture;
+	@OneToMany
 	private Set<OrdreReparation> listOR = new HashSet<>();
 
 	public Cloture_OR(StatutCloture statutCloture, OrdreReparation or) {
@@ -35,7 +38,7 @@ public class Cloture_OR {
 	}
 
 	public String getStatutCloture() {
-		return statutCloture.getStatut();
+		return statutCloture.getLibelle();
 	}
 
 	public void setStatutCloture(StatutCloture statutCloture) {

@@ -22,6 +22,7 @@ import fr.afpa.formation.mecanique.persistence.entity.utilisateur.Formateur;
 import fr.afpa.formation.mecanique.persistence.repository.FormateurRepository;
 
 
+
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @ContextConfiguration(classes = SmallApp.class)
@@ -48,12 +49,13 @@ public class FormateurTest {
 	public void setUp() {
 		Formateur formateur1 = new Formateur();
 
-		formateur1.setNom("Vidal");
-		formateur1.setPrenom("JeanCharles");
-		formateur1.setTelephone("0705040608");
-		formateur1.setIdentifiant("jcv");
-		formateur1.setMotDePasse("jcvMdp");
-		formateur1.setRole("formateurJava");
+		formateur1.setNom(nom);
+		formateur1.setPrenom(prenom);
+		formateur1.setTelephone(telephone);
+		formateur1.setIdentifiant(identifiant);
+		formateur1.setMotDePasse(motDePasse);
+		formateur1.setRole(role);
+		formateur1.setMail(mail);
 		formateur1.setInscription(new Date());
 		formateur1.setRadiation(new Date());
 
@@ -66,7 +68,8 @@ public class FormateurTest {
 		formateur2.setTelephone("0705040609");
 		formateur2.setIdentifiant("tch");
 		formateur2.setMotDePasse("tchMdp");
-		formateur2.setRole("formateurGit");
+		formateur2.setRole("Git");
+		formateur2.setMail("tcharou@tcha.fr");
 		formateur2.setInscription(new Date());
 		formateur2.setRadiation(new Date());
 
@@ -74,14 +77,15 @@ public class FormateurTest {
 
 		Formateur formateur3 = new Formateur();
 
-		formateur2.setNom("Pagan");
-		formateur2.setPrenom("JeanJacques");
-		formateur2.setTelephone("0705040606");
-		formateur2.setIdentifiant("jjp");
-		formateur2.setMotDePasse("jjpMdp");
-		formateur2.setRole("formateurJS");
-		formateur2.setInscription(new Date());
-		formateur2.setRadiation(new Date());
+		formateur3.setNom("Pagan");
+		formateur3.setPrenom("JeanJacques");
+		formateur3.setTelephone("0705040606");
+		formateur3.setIdentifiant("jjp");
+		formateur3.setMotDePasse("jjpMdp");
+		formateur3.setRole("JS");
+		formateur3.setMail("jj@pag.fr");
+		formateur3.setInscription(new Date());
+		formateur3.setRadiation(new Date());
 
 		entityManager.persist(formateur3);
 
@@ -101,6 +105,7 @@ public class FormateurTest {
 		Formateur f = new Formateur();
 		f.setNom("nom1");
 		f.setPrenom("prenom");
+		f.setMail("f@f.fr");
 		f.setTelephone("0654525356");
 		f.setIdentifiant("nf");
 		f.setMotDePasse("nmdp");
@@ -112,6 +117,7 @@ public class FormateurTest {
 		assertEquals(formateurRepository.count(), initSize + 1);
 
 	}
+	
 	@Test
 	public void update() {
 		try {

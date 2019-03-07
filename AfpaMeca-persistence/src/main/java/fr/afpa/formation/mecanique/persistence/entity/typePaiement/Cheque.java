@@ -1,20 +1,12 @@
 package fr.afpa.formation.mecanique.persistence.entity.typePaiement;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Cheque implements TypePaiement {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-	@GenericGenerator(name = "native", strategy = "native")
-	private Long id;
+public class Cheque extends TypePaiement {
 	
 	private static Cheque c = null;	
+	private static String libelle = "Chèque";
 	
 	private Cheque() {}
 	
@@ -25,9 +17,7 @@ public class Cheque implements TypePaiement {
 		return c;
 	}
 
-	public String getPaiement() {
-		// TODO Auto-generated method stub
-		return "Cheque";
+	public static String getLibelle() {
+		return libelle;
 	}
-
 }

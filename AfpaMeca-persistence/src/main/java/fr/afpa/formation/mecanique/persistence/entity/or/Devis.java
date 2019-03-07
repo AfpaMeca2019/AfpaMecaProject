@@ -1,6 +1,6 @@
 package fr.afpa.formation.mecanique.persistence.entity.or;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,8 +28,11 @@ public class Devis {
 	private Date dateCreation;
 	private String numDevis;
 	private Date datePaiement;
+	@OneToMany
 	private Set<DevisItem> listDevisItem = new HashSet<>();
+	@ManyToOne
 	private TypePaiement paie;
+	@ManyToOne
 	private Fournisseur f;
 
 	public Devis(Date dateCreation, String numDevis, Date datePaiement) {
