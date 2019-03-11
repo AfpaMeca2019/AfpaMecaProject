@@ -113,6 +113,16 @@ public class Client extends Personne {
 	public void setNumeroCarteAfpa(String numeroCarteAfpa) {
 		this.numeroCarteAfpa = numeroCarteAfpa;
 	}
+	
+	
+
+	public Set<Vehicule> getListVehicule() {
+		return listVehicule;
+	}
+
+	public void setListVehicule(Set<Vehicule> listVehicule) {
+		this.listVehicule = listVehicule;
+	}
 
 	@Override
 	public String toString() {
