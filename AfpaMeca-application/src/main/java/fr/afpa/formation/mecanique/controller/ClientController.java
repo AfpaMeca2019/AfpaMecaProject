@@ -1,4 +1,4 @@
-package fr.afpa.formation.mecanique.application.controller;
+package fr.afpa.formation.mecanique.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
